@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://rd-pl-api-walter-berrios.onrender.com",
   headers: {
-    "Content-Type": "https://rd-pl-api-walter-berrios.onrender.com"
+    "Content-Type": "application/json"
   }
 });
 
