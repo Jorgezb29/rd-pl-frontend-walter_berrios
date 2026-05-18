@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+nav {
+  background-color: #1a1a2e;
+  padding: 14px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav a:hover,
+nav a.router-link-active {
+  background-color: #e94560;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+  border-left: 4px solid #e94560;
+  padding-left: 10px;
+}
+
+form {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 500px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+form label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+}
+
+form input:not([type="checkbox"]) {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+form input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+}
+
+button[type="submit"] {
+  background-color: #e94560;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #c73652;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 13px;
+}
+
+thead {
+  background-color: #1a1a2e;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background 0.15s;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+tbody td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.btn-eliminar {
+  background-color: #e94560;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.btn-eliminar:hover {
+  background-color: #c73652;
+}
+
+.btn-editar {
+  color: #1a1a2e;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: 1px solid #1a1a2e;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btn-editar:hover {
+  background-color: #1a1a2e;
+  color: #fff;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.id-label {
+  font-size: 12px;
+  color: #888;
+  background: #f0f0f0;
+  padding: 6px 10px;
+  border-radius: 4px;
+  word-break: break-all;
+}
