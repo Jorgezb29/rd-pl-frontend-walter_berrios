@@ -3,7 +3,6 @@
     <h1>Agregar Jugador</h1>
 
     <form @submit.prevent="guardarJugador">
-
       <div>
         <label>Nombre</label>
         <input v-model="jugador.name" placeholder="Nombre" />
@@ -21,7 +20,10 @@
 
       <div>
         <label>Último equipo inglés</label>
-        <input v-model="jugador.lastEnglishTeam" placeholder="Último equipo inglés" />
+        <input
+          v-model="jugador.lastEnglishTeam"
+          placeholder="Último equipo inglés"
+        />
       </div>
 
       <div>
@@ -41,16 +43,23 @@
 
       <div>
         <label>Peso (kg)</label>
-        <input v-model="jugador.weightInKilos" type="number" placeholder="Peso en kilos" />
+        <input
+          v-model="jugador.weightInKilos"
+          type="number"
+          placeholder="Peso en kilos"
+        />
       </div>
 
       <div>
         <label>Altura (cm)</label>
-        <input v-model="jugador.heightInCentimeters" type="number" placeholder="Altura en centímetros" />
+        <input
+          v-model="jugador.heightInCentimeters"
+          type="number"
+          placeholder="Altura en centímetros"
+        />
       </div>
 
       <button type="submit">Guardar</button>
-
     </form>
   </div>
 </template>
@@ -67,28 +76,21 @@ const router = useRouter();
 const jugador = reactive({ ...jugadorSchema });
 
 const guardarJugador = () => {
-
   apiClient
     .post("/player", jugador)
 
     .then((response) => {
-
       if (response.status === 201) {
+        alert("Jugador agregado correctamente");
 
-        // Limpiar formulario
-        Object.assign(jugador, { ...jugadorSchema });
+        jugador.value = { ...jugadorSchema };
 
         router.push("/jugador/list");
-
       }
-
     })
 
     .catch((error) => {
-
       console.log(error);
-
     });
-
 };
 </script>

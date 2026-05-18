@@ -101,6 +101,8 @@ const actualizarJugador = () => {
 
       if (response.status === 200) {
 
+        alert("Jugador actualizado correctamente");
+
         router.push("/jugador/list");
 
       }

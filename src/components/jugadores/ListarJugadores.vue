@@ -96,9 +96,11 @@ const obtenerJugadores = () => {
 
 };
 
-const eliminarJugador = (jugador) => {
+const eliminarJugador = (id) => {
 
-  const id = jugador._id?.toString() ?? jugador._id;
+  const confirmar = confirm("¿Desea eliminar el jugador?");
+
+  if (!confirmar) return;
 
   apiClient
     .delete(`/player/${id}/delete`)
@@ -106,6 +108,8 @@ const eliminarJugador = (jugador) => {
     .then((response) => {
 
       if (response.status === 200) {
+
+        alert("Jugador eliminado correctamente");
 
         obtenerJugadores();
 
